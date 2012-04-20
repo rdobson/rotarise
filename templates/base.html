@@ -1,0 +1,347 @@
+{% load staticfiles %}
+
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light|Molengo&v2' rel='stylesheet' type='text/css'>
+</head>
+<style type="text/css"> 
+* {
+  font-family: 'Molengo', calibri, arial;
+
+}
+html {
+	background: url("/static/media/img/strip.jpg") repeat-y center top #b4b4b4;
+}
+ 
+body {
+	padding: 0;
+	margin: 0;
+	color: #666;
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+
+
+#container
+{
+   margin: 0 auto;
+   width: 900px;
+}
+
+#content-container
+{
+margin-top: 10px;
+float: left;
+width: 900px;
+}
+
+#content
+{
+clear: left;
+float: left;
+width: 560px;
+padding: 20px 0;
+margin: 0 0 0 30px;
+display: inline;
+}
+
+
+#right_panel
+{
+float: right;
+width: 270px;
+padding: 20px 0;
+margin: 0 20px 0 0;
+display: inline;
+}
+
+
+#footer
+{
+clear: both;
+background: #ccc;
+text-align: right;
+padding: 20px;
+height: 1%;
+}
+
+
+
+div#navigation {
+    color: black;
+	background: rgba(255, 255, 255, 0.7);
+	width: 800px;
+	height: 45px;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-top: 4px;
+
+}
+
+a {
+text-decoration: none;
+}
+
+div#main {
+margin-top: 10px;
+padding-right: 5px;
+color: #474c58;
+width: 600px;
+height: 370px;
+padding-top: 5px;
+padding-left: 5px;
+margin-left: 10px;
+margin-right: 10px;
+}
+
+p {
+
+}
+
+div#title {
+font-family: 'Molengo', cursive;
+	font-weight: bold;
+    color: black;
+	font-size: xx-large;
+    color: #414257;
+    text-shadow: 0px 1px 2px #636281;    
+}
+
+div.right {
+float: right;
+}
+
+img#side {
+width: 250px;
+}
+
+div#main_pannel {
+margin-left:10px;
+margin-right:10px;
+}
+
+div#left_panel {
+float: left;
+margin-right: 20px;
+margin-top: 10px;
+padding-left: 20px;
+padding-right: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 60%;
+}
+
+div#right_panel {
+float: right;
+margin-left: 20px
+margin-right: 20px;
+margin-top: 10px;
+background: #f3f3f5;
+height: 400px;
+
+}
+
+img {
+ margin-left: 20px;
+}
+
+div.menu_item {
+	margin-top: 3px;
+   font-size: large;
+   background: #183a81;
+   float: left;
+   width: 150px;
+   height: 30px;
+   margin-left: 3px;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+   cursor: pointer;
+   padding-top: 2px;
+}
+
+div.menu_item:hover {
+   background: black;
+}
+
+div.fieldWrapper {
+ margin-top: 5px;
+ margin-bottom: 5px;
+}
+
+p.error {
+color: red;
+}
+
+input2 {
+border-style: solid;
+border-width: 1px;
+border-color: grey;
+height: 30px;
+font-size: large;
+}
+
+input#submit
+{
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    width: 200px;
+    margin-left: 20px;
+    border: none;
+    text-shadow: 0px 1px 2px #000;
+    font-family: 'Molengo', cursive;
+    -webkit-box-shadow: -1px -1px 0px #efb824, 1px 1px 0px #bfbbb2;
+    margin-top: 10px;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4992d), to(#a05a08));
+    background: -moz-linear-gradient(top,  #f4992d,  #a05a08);
+}
+
+input#submit:hover
+{
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2ce77), to(#dba628));
+    background: -moz-linear-gradient(top,  #f2ce77,  #dba628);
+}
+
+
+input {
+font-size: 18px;
+width: 250px;
+padding:10px;
+margin: 10px;
+border: 1px solid #dedede;
+
+border-radius: 10px;
+-moz-border-radius:10px;
+-webkit-border-radius: 10px;
+
+text-shadow: 1px 1px 0px #fff;
+-webkit-box-shadow: -1px -1px 0px #eee;
+
+background: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#fbfbfb));
+background: -moz-linear-gradient(top,  #ffffff,  #fbfbfb);
+
+}
+
+div.label {
+font-weight: bold;
+}
+
+div.clear {
+clear: both;
+}
+
+div#center {
+text-align: center;
+}
+
+div#left {
+text-align:left;
+}
+
+div#box {
+  left-padding: 10px;
+}
+
+div.auth_panel {
+float: right;
+margin-right: 100px;
+margin-top: 10px;
+text-align:right;
+
+}
+
+div#nav_button {
+#background: url(/media/img/button_up.jpg);
+cursor: pointer;
+text-align: center;
+padding: 10px;
+height: 25px;
+float: left;
+font-size: 18px;
+margin-left:1px;
+
+   color: #d1d0de;
+    font-weight: bold;
+    border: none;
+    text-shadow: 0px 1px 2px #000;
+
+    background: -webkit-gradient(linear, left top, left bottom, from(#8484c2), to(#121260));
+    background: -moz-linear-gradient(top,  #8484c2,  #121260);
+
+ font-family: 'Molengo', cursive;
+}
+
+div#nav_button:hover {
+#background: url(/media/img/button_down.jpg);
+background: -webkit-gradient(linear, left top, left bottom, from(#f2ce77), to(#dba628));
+    background: -moz-linear-gradient(top,  #f2ce77,  #dba628);
+color: #fff;
+
+}
+
+input.nav_btn {
+width: 150px;
+height: 50px;
+cursor: pointer;
+background: url(/media/img/giving_button_up.jpg);
+
+}
+
+input.nav_btn:hover {
+
+background: url(/media/img/giving_button_down.jpg)
+
+}
+
+div.choice {
+width:170px;
+height:30px;
+text-align: center;
+background: #A4A4A4;
+font-weight: bold;
+color: white;
+float: left;
+margin-right: 10px;
+padding-top: 20px;
+padding-bottom:20px;
+}
+
+{% block style %}
+{% endblock %}
+
+</style> 
+<body> 
+<div id="container">
+<div class="auth_panel">
+{% if user.is_authenticated %}
+{{user.username}}</br><a href='/logout/'>Logout</a>
+/ <a href='/password_change'>Change Password</a>
+{% else %}
+<a href='/login/'>Login</a>
+{% endif %}
+</div>
+
+<div id="content-container"> 
+<div id="navigation">
+<!--<a href="/main/"><div id="nav_button">Rota's</div></a>-->
+</div>
+<div id="content">
+{% block main_pannel %}
+{% endblock %}
+</div>
+
+<div id="right_panel">
+{% block right_panel %}
+{% endblock %}
+</div>
+
+
+<div class="clear">
+</div>
+</div>
+</div>
+</body>
+</html>

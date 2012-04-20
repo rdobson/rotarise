@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block style %}
+div.error_msg {
+width: 200px;
+color: red;
+}
+
+div.login {
+margin-left: 5px;
+}
+{% endblock %}
+
+{% block main_pannel %}
+<div id="title">Please login...</div>
+<p> If you have not yet signed up, <a href='/register/'>register here.</a>
+{% endblock %}
+
+{% block right_panel %}
+    <div class="login">
+      <form action="/login/" method="post">{% csrf_token %}
+	<div class="fieldWrapper">
+	  <label class="field">
+	    <div class="label">Email</div></label>
+	  {{ form.username.errors }}
+	  {{ form.username }}
+	</div>
+	<div class="fieldWrapper">
+	  <label class="field">
+	    <div class="label">Password</div></label>
+	  {{ form.password.errors }}
+	  {{ form.password }}
+	<input class="button" id="submit" type="Submit" value="Login"/>
+	{% if invalid_password %}
+	<div class="error_msg">
+	Error, please enter a valid username and or password.
+	</div>
+	{% endif %}
+	 <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+    </div>
+
+<div class="box">
+<a href={% url django.contrib.auth.views.password_reset %}>Forgot your password?</a>
+</div>
+
+</br></br>
+<div class="box">
+Or if you haven't signed up yet,</br> <a href='/register/'>click here</a> to register.
+</div>
+
+
+{% endblock %}
+
+
+{% block main %}
+<div id="title">Login</div>
+<div id="box">
+Please login with your credentials.
+</div>
+{% endblock %}
